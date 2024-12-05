@@ -185,27 +185,41 @@
         <div class="undeployed-projects">
           <h3>Undeployed Projects</h3>
           <div class="project-grid">
+            <!-- Project 1 -->
             <div class="project-card">
-              <h4>E-Commerce Website</h4>
+              <h4>Kafa Management System</h4>
               <p>
-                Built using Laravel with Stripe integration. Responsive and
-                optimized for performance.
+                A university subject project designed for managing school operations.
+                The system includes features like:
+              </p>
+              <ul>
+                <li>User registration for students, teachers, and administrators</li>
+                <li>Teacher subject assignments</li>
+                <li>Student academic schedules</li>
+                <li>A comprehensive payment module integrated with Stripe</li>
+              </ul>
+              <p>
+                Developed using <strong>Laravel</strong> and Stripe for secure and seamless payment processing.
               </p>
             </div>
+
+            <!-- Project 2 -->
             <div class="project-card">
-              <h4>Mobile App</h4>
+              <h4>Aquarium Monitoring System</h4>
               <p>
-                Developed with FlutterFlow and Firebase for real-time data
-                updates and user engagement.
+                An IoT-based mobile application for real-time aquarium monitoring,
+                utilizing various sensors to ensure optimal conditions. Key features include:
+              </p>
+              <ul>
+                <li>Monitoring pH, temperature, soil moisture, and Total Dissolved Solids (TDS)</li>
+                <li>Real-time data updates with Firebase as the backend</li>
+                <li>Customizable alerts for unsafe conditions</li>
+              </ul>
+              <p>
+                Developed using <strong>Flutter</strong>, <strong>FlutterFlow</strong>, and integrated with Firebase for seamless sensor data management.
               </p>
             </div>
-            <div class="project-card">
-              <h4>Portfolio Website</h4>
-              <p>
-                Personal project showcasing my skills, projects, and contact
-                details in a dark, ambient theme.
-              </p>
-            </div>
+
           </div>
         </div>
 
@@ -356,7 +370,7 @@
 
             // Navigate back to the main page after 3 seconds
             setTimeout(() => {
-              window.location.href = "index.php#contact"; // Replace with your homepage
+              window.location.href = "index.php"; // Replace with your homepage
             }, 3000);
           } else {
             alert("Failed to send message: " + data.message);
