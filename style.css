@@ -1,12 +1,14 @@
 /* General Styles */
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: #fff;
   background: #121212;
   margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
   font-weight: 600;
 }
@@ -25,6 +27,7 @@ a {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .btn {
@@ -32,11 +35,14 @@ a {
   z-index: 10;
 }
 
-/* Navbar Customizations */
+/* Sticky Navbar Customizations */
 .navbar {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 1));
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  position: sticky; /* Makes the navbar sticky */
+  top: 0; /* Sticks the navbar to the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other elements */
 }
 
 .navbar-brand {
@@ -54,16 +60,22 @@ a {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
+  
 }
 
 .navbar-nav .nav-link:hover {
   color: #00ffd0;
   text-shadow: 0 0 8px #00ffd0;
+  
 }
 
 /* Header Section */
 header {
-  background: radial-gradient(circle, rgba(0, 255, 208, 0.1) 0%, rgba(18, 18, 18, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 208, 0.1) 0%,
+    rgba(18, 18, 18, 1) 100%
+  );
   height: 100vh;
   display: flex;
   align-items: center;
@@ -85,7 +97,7 @@ header {
 }
 
 .image-container img {
-  width: 200px;
+  width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 255, 208, 0.3);
@@ -138,10 +150,6 @@ header {
   }
 }
 
-
-
-
-
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .header-content {
@@ -161,134 +169,157 @@ header {
   }
 }
 
-/* About Section */
+/* Add scroll offset to sections */
 section {
-  padding: 50px 0;
+  scroll-margin-top: 70px; /* Adjust this value based on your navbar's height */
 }
 
-/* About Section */
-/* About Section */
-#about {
-  height: 100vh; /* Same height as the Home section */
-  background: #121212; /* Dark background */
-  padding: 50px 20px; /* Adds space around the section */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-/* Section Title */
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+/* General Section Styling */
+.about {
   text-align: center;
+  background: linear-gradient(135deg, #0d0d0d, #121212);
+  padding: 50px 20px;
+}
+
+.section-title {
   color: #00ffd0;
   margin-bottom: 30px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Cards Container */
 .cards-container {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px; /* Adjusted gap between cards */
-}
-
-/* Cards Styling */
-.card {
-  background: #1f1f1f;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 255, 208, 0.3); /* Glowing border effect */
-  padding: 20px;
-  flex: 1 1 45%; /* Ensures two cards are side-by-side on larger screens */
-  min-width: 300px; /* Minimum width for smaller screens */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.bio-card p {
-  text-align: justify; /* Justifies biodata text */
-  line-height: 1.8;
-}
-
-.skills-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between skill icons */
-  margin-top: 20px;
+  gap: 30px;
 }
 
-/* Skills Icons */
-.skill-icon {
-  width: 60px;
-  height: 60px;
-  background: #e9e6e6;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 255, 208, 0.5); /* Glowing border */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-icon i {
-  font-size: 2rem;
-  color: #fff; /* Default icon color */
-}
-
-.skill-icon:hover {
-  transform: scale(1.2); /* Enlarges on hover */
-  box-shadow: 0 0 20px rgba(0, 255, 208, 0.7);
-}
-
-@media (max-width: 768px) {
-  #about {
-    padding: 30px 10px; /* Reduce padding for smaller screens */
-  }
-
-  .cards-container {
-    flex-direction: column; /* Stack cards vertically */
-    gap: 20px; /* Adjust gap for smaller screens */
-  }
-
-  .card {
-    flex: 1 1 100%; /* Full width for smaller screens */
-  }
-
-  .skill-icon {
-    width: 50px; /* Slightly smaller icons */
-    height: 50px;
-  }
-
-  .skill-icon i {
-    font-size: 1.8rem; /* Adjust icon size */
-  }
-}
-
-
-
-
-/* Projects Section */
-.projects {
+/* Card Styles */
+.card {
+  width: 300px;
+  background: #1f1f1f;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 208, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
   text-align: center;
 }
 
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 25px rgba(0, 255, 208, 0.6);
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  color: #00ffd0;
+  margin-bottom: 15px;
+}
+
+.card-body p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Icon Styling */
+.skills .skill-icon,
+.tools .tool-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f6f6;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 255, 208, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills .skill-icon:hover,
+.tools .tool-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgba(0, 255, 208, 0.6);
+}
+
+.tools .tool-icon img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .tools .tool-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* General Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 20px;
+  background: #121212;
+}
+
+.projects h2 {
+  color: #00ffd0;
+  margin-bottom: 30px;
+}
+
+/* Main Grid for Undeployed and Deployed Sections */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Adds spacing between the two sections */
+}
+
+/* Undeployed and Deployed Sections */
+.undeployed-projects,
+.deployed-projects {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%; /* Ensures both sections fit side-by-side */
+}
+
+.undeployed-projects h3,
+.deployed-projects h3 {
+  color: #00ffd0;
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+
+/* Project Grid for Cards */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adds consistent spacing between cards */
+}
+
+/* Undeployed Project Cards */
 .project-card {
+  width: 90%;
+  max-width: 300px;
   background: #1f1f1f;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0px 0px 10px rgba(0, 255, 208, 0.3);
   transition: transform 0.3s ease;
 }
@@ -297,9 +328,90 @@ section {
   transform: scale(1.05);
 }
 
-.project-card h5 {
+.project-card h4 {
   color: #00ffd0;
+  margin-bottom: 10px;
 }
+
+.project-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Deployed Project Cards */
+.deployed-card {
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 208, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.deployed-card:hover {
+  transform: scale(1.05);
+}
+
+.deployed-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.deployed-card h4 {
+  color: #00ffd0;
+  margin-top: 15px;
+}
+
+.deployed-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Image Frame */
+.frame {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 255, 208, 0.3);
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.frame img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .undeployed-projects,
+  .deployed-projects {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .project-card,
+  .deployed-card {
+    max-width: 95%;
+  }
+}
+
+
+
 
 /* Contact Section */
 .contact {
@@ -332,3 +444,13 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+
+#submitButton {
+  position: relative;
+}
+
+#spinner {
+  margin-right: 5px;
+}
+

@@ -1,0 +1,12 @@
+# Ignore the .env file
+.env
+
+# Ignore composer dependencies (optional if you don't want to push these)
+/vendor/
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore uploads or user-generated content
+/uploads/
